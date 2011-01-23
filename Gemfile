@@ -28,6 +28,7 @@ gem 'devise', '1.1.5'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
+   gem "metric_fu", "2.0.1"
    gem "rspec-rails", ">= 2.0.0.beta.22"
    gem 'webrat'
 end
