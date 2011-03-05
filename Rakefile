@@ -3,9 +3,9 @@
 
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
+require 'rake/clean'
 
 CLEAN << 'target'
-Rake::Task[:default].clear
 task :default => :before_commit
 
 AlphaRor::Application.load_tasks
