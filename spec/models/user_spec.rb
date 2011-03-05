@@ -5,4 +5,9 @@ describe User do
     true.should == true
     
   end
+
+  it "should pass coverage" do
+    User.new.some_stuff :some_arg
+
+  end
 end
