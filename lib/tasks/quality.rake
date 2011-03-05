@@ -22,10 +22,14 @@ desc "code quality checks"
 task :quality => "quality:default"
 
 namespace :quality do
-  task :default => ["spec:covered", :metric_fu]
+  task :default => :metric_fu
 
   source_file_globs = ["app/**/*.rb", "lib/*.rb", "lib/**/*.rb"]
 
-  task :metric_fu => ["metrics:all"]
+  task :metric_fu => ["metrics:all", :verify_metrics]
+
+  task :verify_metrics do
+    p "PLACE HOLDER FOR METRICS VERIFICATIONS"
+  end
 
 end

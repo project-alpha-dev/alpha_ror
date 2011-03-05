@@ -1,1 +1,1 @@
-task :before_commit => :quality
+task :before_commit => ["spec:covered", :quality, :cucumber]
