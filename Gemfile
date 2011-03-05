@@ -6,7 +6,7 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'devise', '1.1.5'
+gem 'devise', '1.1.7'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -30,5 +30,8 @@ gem 'devise', '1.1.5'
 group :development, :test do
    gem "metric_fu", "2.0.1"
    gem "rspec-rails", ">= 2.0.0.beta.22"
-   gem 'webrat'
+   gem "rr", "1.0.2"
+   gem "webrat", "0.7.3"
+   gem "cucumber", "0.10.0"
+   gem "cucumber-rails", "0.3.2"
 end
