@@ -1,3 +1,3 @@
 #!/bin/bash
 
-x-www-browser file:///home/dev/prog/alpha_ror/tmp/metric_fu/output/index.html
+x-www-browser file:///home/dev/prog/alpha_ror/target/metrics/output/index.html
