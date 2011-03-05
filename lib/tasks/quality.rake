@@ -8,6 +8,14 @@ MetricFu::Configuration.run do |config|
   config.scratch_directory = File.join(config.base_directory, 'scratch')
   config.output_directory  = File.join(config.base_directory, 'output')
   config.data_directory    = File.join(config.base_directory, '_data')
+
+  #flay craps out on devise views, so we exclude it from here
+  config.flay   = {:dirs_to_flay => ['app/controllers/', 
+                                     'app/helpers/',
+                                     'app/models/',
+                                     'lib'],
+                   :minimum_score => 100,
+                   :filetype => ['rb']}
 end
 
 desc "code quality checks"
