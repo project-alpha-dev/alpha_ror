@@ -34,4 +34,5 @@ group :development, :test do
    gem "webrat", "0.7.3"
    gem "cucumber", "0.10.0"
    gem "cucumber-rails", "0.3.2"
+   gem "launchy", "0.4.0"
 end
