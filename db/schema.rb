@@ -10,12 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110226045544) do
+ActiveRecord::Schema.define(:version => 20110306131359) do
 
   create_table "users", :force => true do |t|
-    t.string   "email",                               :default => "", :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "email",                               :default => "",           :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "",           :null => false
+    t.string   "password_salt",                       :default => "",           :null => false
     t.string   "reset_password_token"
     t.string   "remember_token"
     t.datetime "remember_created_at"
@@ -33,11 +33,16 @@ ActiveRecord::Schema.define(:version => 20110226045544) do
     t.string   "authentication_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name",                          :default => "",           :null => false
+    t.string   "last_name",                           :default => "",           :null => false
+    t.string   "user_name",                           :default => "",           :null => false
+    t.date     "date_of_birth",                       :default => '1900-01-01', :null => false
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
   add_index "users", ["unlock_token"], :name => "index_users_on_unlock_token", :unique => true
+  add_index "users", ["user_name"], :name => "index_users_on_user_name", :unique => true
 
 end

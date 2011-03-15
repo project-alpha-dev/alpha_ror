@@ -9,8 +9,10 @@ Then /^I should be redirected to (.+)$/ do |page_name|
   Then "I should be on #{page_name}"
 end
 
-Then /^I should receive a confirmation email at "([^"]*)"$/ do |arg1|
+Then /^I should receive a confirmation email at "([^"]*)"$/ do |addr|
   delivered_emails = ActionMailer::Base.deliveries
-  delivered_emails[0].should contain("You can confirm your account through the link below")
+  the_mail = delivered_emails.select{|mail| mail.to.include? addr}.first
+  the_mail.should contain("You can confirm your account through the link below")
+  
 end
 

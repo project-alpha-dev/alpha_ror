@@ -3,8 +3,20 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+  <p><%= f.label :first_name%><br />
+  <%= f.text_field :first_name%></p>
+
+  <p><%= f.label :last_name%><br />
+  <%= f.text_field :last_name%></p>
+
   <p><%= f.label :email %><br />
   <%= f.text_field :email %></p>
+
+  <p><%= f.label :date_of_birth%><br />
+  <%= f.text_field :date_of_birth%></p>
+
+  <p><%= f.label :user_name%><br />
+  <%= f.text_field :user_name%></p>
 
   <p><%= f.label :password %><br />
   <%= f.password_field :password %></p>
